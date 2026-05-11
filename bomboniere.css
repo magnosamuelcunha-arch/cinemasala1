@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0f0f0f;
+    background-image:linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1400&auto=format&fit=crop');
+    background-size:cover;
+    background-attachment:fixed;
+    font-family:'Poppins', sans-serif;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* BANNER */
+
+.banner{
+    height:350px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+.banner-content{
+    max-width:700px;
+}
+
+.banner-content h2{
+    font-size:55px;
+    color:orange;
+    margin-bottom:20px;
+}
+
+.banner-content p{
+    font-size:20px;
+    color:#ddd;
+}
+
+header{
+    background:black;
+    padding:25px;
+    text-align:center;
+    border-bottom:2px solid orange;
+}
+
+header h1{
+    color:orange;
+    font-size:40px;
+}
+
+.produtos{
+    padding:80px 40px;
+}
+
+.titulo{
+    text-align:center;
+    font-size:42px;
+    color:orange;
+    margin-bottom:50px;
+}
+
+.produtos-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.produto{
+    width:330px;
+
+    background:rgba(24,24,24,0.92);
+
+    border-radius:22px;
+    overflow:hidden;
+
+    border:1px solid rgba(255,165,0,0.3);
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+
+    transition:0.4s;
+}
+
+.produto:hover{
+    transform:translateY(-10px);
+    border-color:orange;
+}
+
+.produto img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.produto-info{
+    padding:25px;
+}
+
+.produto-info h3{
+    color:orange;
+    margin-bottom:20px;
+    font-size:26px;
+}
+
+.produto-info p{
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+select{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#2b2b2b;
+    color:white;
+
+    font-size:16px;
+}
+
+.check{
+    margin-top:20px;
+    display:block;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+select{
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+    border-radius:12px;
+
+    background:#2b2b2b;
+    color:white;
+
+    font-size:16px;
+}
+
+input[type="checkbox"]{
+    margin-right:10px;
+    transform:scale(1.2);
+}
+
+button{
+    width:100%;
+
+    margin-top:30px;
+
+    padding:15px;
+
+    border:none;
+    border-radius:12px;
+
+    background:orange;
+    color:black;
+
+    font-size:18px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+.animacao{
+    animation:entrada 1s ease;
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.resultado{
+    margin-top:25px;
+
+    padding:20px;
+
+    background:linear-gradient(145deg,#101010,#1b1b1b);
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:26px;
+    font-weight:700;
+
+    color:orange;
+
+    border:1px solid rgba(255,165,0,0.4);
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+@media(max-width:600px){
+
+    .card{
+        width:100%;
+    }
+
+    .container h2{
+        text-align:center;
+        font-size:32px;
+    }
+}
+
+.finalizar-area{
+    margin-top:50px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+}
+
+.btn-finalizar{
+    width:320px;
+
+    padding:18px;
+
+    border:none;
+    border-radius:15px;
+
+    background:orange;
+    color:black;
+
+    font-size:20px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+.btn-finalizar:hover{
+    transform:scale(1.05);
+}
+
+.resultado{
+    width:320px;
+
+    padding:22px;
+
+    background:linear-gradient(145deg,#101010,#1b1b1b);
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-size:28px;
+    font-weight:700;
+
+    color:orange;
+
+    border:1px solid rgba(255,165,0,0.4);
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}

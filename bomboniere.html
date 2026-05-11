@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomboniere - Sala1 Cinema</title>
+
+    <link rel="stylesheet" href="bomboniere.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Sala1 Bomboniere</h1>
+    </header>
+
+    <main>
+
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Sabores que acompanham sua diversão 🍿</h2>
+                <p>
+                    Escolha sua pipoca, bebida e monte o combo perfeito
+                    para assistir seus filmes favoritos.
+                </p>
+            </div>
+        </section>
+
+<section class="produtos">
+
+    <h2 class="titulo">Monte seu Combo 🍿</h2>
+
+    <div class="produtos-container">
+
+        <!-- PIPOCA -->
+
+        <div class="produto animacao">
+
+            <img src="https://images.unsplash.com/photo-1578849278619-e73505e9610f?q=80&w=800&auto=format&fit=crop">
+
+            <div class="produto-info">
+
+                <h3>🍿 Pipoca</h3>
+
+                <select id="pipoca">
+                    <option value="15">Pequena - R$15</option>
+                    <option value="20">Média - R$20</option>
+                    <option value="25">Grande - R$25</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- BEBIDA -->
+
+        <div class="produto animacao">
+
+            <img src="https://images.unsplash.com/photo-1581006852262-e4307cf6283a?q=80&w=800&auto=format&fit=crop">
+
+            <div class="produto-info">
+
+                <h3>🥤 Bebida</h3>
+
+                <select id="bebida">
+                    <option value="0">Sem bebida</option>
+                    <option value="8">Refrigerante - R$8</option>
+                    <option value="10">Suco - R$10</option>
+                </select>
+
+                <label class="check">
+                    <input type="checkbox" id="sucoExtra">
+                    Adicionar Suco Premium (+R$12)
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- COMBO -->
+
+        <div class="produto animacao">
+
+            <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?q=80&w=800&auto=format&fit=crop">
+
+            <div class="produto-info">
+
+                <h3>🎬 Combo</h3>
+
+                <select id="combo">
+                    <option value="0">Sem combo</option>
+                    <option value="25">Combo Individual - R$25</option>
+                    <option value="40">Combo Casal - R$40</option>
+                    <option value="60">Combo Família - R$60</option>
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ÁREA FINAL -->
+
+    <div class="finalizar-area">
+
+        <button class="btn-finalizar" onclick="calcularTotal()">
+            Finalizar Pedido
+        </button>
+
+        <div class="resultado" id="resultado">
+            Total: R$0
+        </div>
+
+    </div>
+
+</section>
+    </main>
+
+   <script>
+
+function calcularTotal(){
+
+    let pipoca = Number(document.getElementById('pipoca').value)
+
+    let bebida = Number(document.getElementById('bebida').value)
+
+    let combo = Number(document.getElementById('combo').value)
+
+    let total = pipoca + bebida + combo
+
+    let sucoExtra = document.getElementById('sucoExtra')
+
+    if(sucoExtra.checked){
+        total += 12
+    }
+
+    document.getElementById('resultado').innerHTML =
+    `Total do Pedido:
+    <strong>R$${total.toFixed(2)}</strong>`
+
+}
+
+</script>
+
+</body>
+</html>
